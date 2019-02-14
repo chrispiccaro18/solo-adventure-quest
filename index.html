@@ -12,10 +12,45 @@
     </header>
     <main>
         <form id="sign-in">
-
+            <p>
+                <label for="name" id="user-name">Your Name:</label>
+                <input type="text" required name="user-name">
+            </p>
+            <fieldset>
+                <legend>Pick Your Race:</legend>
+                <p class="races">
+                    <label class="race">
+                        <input type="radio" name="race" required value="human">
+                        <img src="./assets/race-icons/human.png" alt="Icon of a human">
+                        Human
+                    </label>
+                    <label class="race">
+                        <input type="radio" name="race" value="dwarf">
+                        <img src="./assets/race-icons/dwarf.png" alt="Icon of a dwarf">
+                        Dwarf
+                    </label>
+                    <label class="race">
+                        <input type="radio" name="race" value="elf">
+                        <img src="./assets/race-icons/elf.png" alt="Icon of an elf">
+                        Elf
+                    </label>
+                </p>
+            </fieldset>
+            <button>To Adventure!</button>
         </form>
     </main>
-    <footer></footer>
+    <footer>
+        <cite>
+            <div>
+                Icons made by 
+                <a href="https://www.freepik.com/" title="Freepik">Freepik</a> 
+                from 
+                <a href="https://www.flaticon.com/"title="Flaticon">www.flaticon.com</a> 
+                is licensed by 
+                <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            </div>
+        </p>
+    </footer>
     <script type="module" src="./src/index.js"></script>
 </body>
 </html>
