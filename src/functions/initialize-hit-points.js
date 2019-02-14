@@ -1,4 +1,4 @@
-function produceHitPoints(race) {
+function initializeHitPoints(race) {
     if(race === 'dwarf') {
         return 60;
     }
@@ -8,4 +8,4 @@ function produceHitPoints(race) {
     return 50;
 }
 
-export default produceHitPoints;
+export default initializeHitPoints;
