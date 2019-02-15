@@ -8,15 +8,16 @@ signInForm.addEventListener('submit', function(event) {
     
     const signInFormData = new FormData(signInForm);
 
-    const initialHitPoints = initializeHitPoints(signInFormData.get('race'));
-    const initialGold = initializeGold(signInFormData.get('race'));
-
     const userProfile = {
         name: signInFormData.get('user-name'),
         race: signInFormData.get('race'),
-        hp: initialHitPoints,
-        gold: initialGold
+        hp: initializeHitPoints(signInFormData.get('race')),
+        gold: initializeGold(signInFormData.get('race')),
     };
 
-    console.log(userProfile);
+    const userProfileString = JSON.stringify(userProfile);
+    window.localStorage.setItem(userProfile.name, userProfileString);
+
+    const mapURL = 'map.html?name=' + encodeURIComponent(userProfile.name);    
+    window.location = mapURL;
 });
